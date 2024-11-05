@@ -1,0 +1,17 @@
+/* p1_1 */
+SELECT * from products;
+
+/* p1_2 */
+SELECT name, phone FROM shippers;
+
+/* p2 */
+SELECT AVG(price) as avg_price, MAX(price) as max_price, MIN(price) as min_price FROM products;
+
+/* p3 */
+SELECT DISTINCT category_id, price FROM products ORDER BY price DESC LIMIT 10;
+
+/* p4 */
+SELECT COUNT(*) as products_count FROM products WHERE price BETWEEN 20 AND 100;
+
+/* p5 */
+SELECT supplier_id, COUNT(supplier_id) as counts, AVG(price) from products GROUP BY supplier_id;
